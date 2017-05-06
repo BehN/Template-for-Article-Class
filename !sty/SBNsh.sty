@@ -1,0 +1,231 @@
+%--------------------------------------------------------------------
+% Short-Hand Writings:
+%--------------------------------------------------------------------
+%% Comment:
+\newcommand{\rem}[1]{}
+
+%---------------------------------------------------------------------
+% Frequently used keywords:
+%---------------------------------------------------------------------
+\newcommand{\Sec}[1]{\mbox{Sec.~\ref{#1}}}
+\newcommand{\Chap}[1]{\mbox{Chap.~\ref{#1}}}
+\newcommand{\App}[1]{\mbox{Appendix~\ref{#1}}}
+\newcommand{\Fig}[1]{\mbox{Fig.~\ref{#1}}}
+\newcommand{\Figs}[1]{\mbox{Figures~\ref{#1}}}
+\newcommand{\Tab}[1]{\mbox{Table~\ref{#1}}}
+\newcommand{\Tabs}[1]{\mbox{Tables~\ref{#1}}}
+\newcommand{\Eq}[1]{\mbox{Eq.~\eqref{#1}}}
+\newcommand{\ie}{\mbox{, i.e.,}}   %it should always be followed by a comma, and then the remainder of the sentence.
+\newcommand{\eg}{\mbox{, e.g.}}      % It is usually followed by a comma, but there may be exceptions based on context.
+\newcommand{\Thm}[1]{\mbox{Theorem~\ref{#1}}}
+\newcommand{\Lem}[1]{\mbox{Lemma~\ref{#1}}}
+\newcommand{\Cor}[1]{\mbox{Corollary~\ref{#1}}}
+\newcommand{\Algo}[1]{\mbox{Algorithm~\ref{#1}}}
+\newcommand{\Flow}[1]{\mbox{Flowchart~\ref{#1}}}
+%---------------------------------------------------------------------
+
+%% Bold:
+\newcommand{\bs}[1]{\mbox{$\boldsymbol{#1}$}}
+\newcommand{\bm}[1]{\mbox{\boldmath $#1$}}       
+\newcommand{\mat}[1]{\mathbf{#1}}
+
+%% Freuently Used:
+\newcommand{\op}[1]{\operatorname{#1}} 
+\newcommand{\p}{^\prime}
+%\newcommand{\t}{^\mathrm{t}}
+
+%---------------------------------------------------------------------
+% TEXT: Some Short-Hand Writings in TEXT environmemt:
+%---------------------------------------------------------------------
+\newcommand{\textsub}[1]{$_{\hbox{\footnotesize{#1}}}$}
+\newcommand{\textsup}[1]{$^{\hbox{\footnotesize{#1}}}$}
+
+%\newcommand{\reg}{$^{\hbox{\footnotesize\textregistered}}$}
+\newcommand{\reg}[1]{\mbox{#1\textsuperscript{\textregistered}}}
+
+
+%---------------------------------------------------------------------
+% MATH: Some Short-Hand Writings in MATH environmemt:
+%---------------------------------------------------------------------
+%
+%---------------------------------------
+% (), {}, [], <>, |.|, ||.||
+%---------------------------------------
+%% Brackets, parenthesis, etc:
+\newcommand{\brk}[1]{\left(#1\right)}          %(.)
+\newcommand{\set}[1]{\left\{#1\right\}}        %{.}
+\newcommand{\mm}[1]{\left[#1\right]}           %[.]
+\newcommand{\seq}[1]{\left<#1\right>}          %<.>
+\newcommand{\abs}[1]{\lvert#1\rvert}           %|.|
+\newcommand{\norm}[1]{\left\Vert#1\right\Vert} %||.||
+
+%---------------------------------------
+%% Symbols & Special characters:
+%---------------------------------------
+\newcommand{\crv}[1]{\overset{\lower3pt\hbox{$\smash{\scriptscriptstyle\boldsymbol{\frown}}$}}{#1}} 
+\newcommand{\To}{\longrightarrow}
+\newcommand{\eps}{\varepsilon}
+\newcommand{\EPS}{\boldsymbol{\mathlarger{{\varepsilon}}}}
+\newcommand{\PHI}{\mathbf{\Phi}}
+\newcommand{\defeq}{\buildrel def \over =}
+%\newcommand{\trieq}{\buildrel \Delta \over =}
+%\newcommand{\btrieq}{\buildrel \bigtriangleup \over =}
+ 
+
+
+%---------------------------------------
+%% Sets:  
+%---------------------------------------
+%\newcommand{\NN}{\mathbb{N}}
+%\newcommand{\RR}{\mathbb{R}}
+%\newcommand{\real}{\mathbb{R}}
+%\newcommand{\FF}{\mathbb{F}}
+%\newcommand{\CC}{\mathbb{C}}
+%\newcommand{\complex}{\mathbb{C}}
+%\newcommand{\RPlus}{\mathbb{R}^{+}}
+%\newcommand{\LHS}{\mathbb{C}^{-}}  %The open left half plane in the complex s-plane
+%\newcommand{\RHS}{\mathbb{C}^{+}}  %The open right half plane in the complex s-plane
+
+
+%--------------------------------------- 
+%% Matrices & Vectors:
+%---------------------------------------
+%\newcommand{\bo}{\mathbf{0}}
+%
+%\newcommand{\A}{{\bf A}}
+%\newcommand{\B}{{\bf B}}
+%\newcommand{\C}{{\bf C}}
+%\newcommand{\D}{{\bf D}} 
+%\newcommand{\f}{{\bf f}}
+%\newcommand{\F}{{\bf F}}
+%\newcommand{\G}{{\bf G}}
+%\newcommand{\U}{{\bf u}}
+%\newcommand{\q}{{\bf q}}
+%\newcommand{\Q}{{\bf Q}}
+%\newcommand{\x}{{\bf x}}
+%\newcommand{\X}{{\bf X}}
+%\newcommand{\y}{{\bf y}}
+%\newcommand{\Y}{{\bf Y}}
+%\newcommand{\z}{{\bf z}}
+%\newcommand{\Z}{{\bf Z}}
+
+%---------------------------------------
+%% Calligraphy letters:
+%---------------------------------------
+%\newcommand {\cA} {{\cal A}}
+%\newcommand {\cB} {{\cal B}}
+%\newcommand {\cC} {{\cal C}}
+%\newcommand {\cD} {{\cal D}}
+%\newcommand {\cE} {{\cal E}}
+%\newcommand {\cI} {{\cal I}}
+%\newcommand {\cH} {{\cal H}}
+%\newcommand {\cL} {{\cal L}}
+%\newcommand {\cO} {{\cal O}}
+%\newcommand {\cP} {{\cal P}}
+%\newcommand {\cQ} {{\cal Q}}
+%\newcommand {\cR} {{\cal R}}
+%\newcommand {\cV} {{\cal V}}
+%\newcommand {\cW} {{\cal W}}
+%\newcommand {\cM} {{\cal M}}
+%\newcommand {\cN} {{\cal N}}
+%\newcommand {\cS} {{\cal S}}
+%\newcommand {\cY} {{\cal Y}}
+
+
+%---------------------------------------
+%% Hat:
+%---------------------------------------
+\newcommand{\mathat}[1]{\mathbf{\hat{#1}}}
+%\newcommand{\Ah}{\mathbf{\hat{A}}}
+%\newcommand{\Bh}{\mathbf{\hat{B}}}
+%\newcommand{\Ch}{\mathbf{\hat{C}}}
+%\newcommand{\Dh}{\mathbf{\hat{D}}}
+%\newcommand{\Fh}{\mathbf{\hat{F}}}
+%\newcommand{\Gh}{\mathbf{\hat{G}}}
+%\newcommand{\Lh}{\mathbf{\hat{L}}}
+%\newcommand{\yh}{\mathbf{\hat{y}}}
+
+%---------------------------------------
+% Math Size
+%---------------------------------------
+\newcommand{\mli}[1]{\mathlarger{#1}}
+\newcommand{\mlii}[1]{\mathlarger{\mathlarger{#1}}}
+\newcommand{\mliii}[1]{\mathlarger{\mathlarger{\mathlarger{#1}}}}
+
+%---------------------------------------
+% For System Theory:
+%---------------------------------------
+\newcommand{\matdot}[1]{\mathbf{\dot{#1}}}
+\newcommand{\dotX}{\mathbf{\dot{X}}}
+\newcommand{\dotx}{\mathbf{\dot{x}}}
+\newcommand{\dX}{\frac{d}{dt}\,\mathbf{X}}
+\newcommand{\dx}{\frac{d}{dt}\,\mathbf{x}}
+\newcommand{\dotZ}{\mathbf{\dot{Z}}}
+\newcommand{\dotz}{\mathbf{\dot{z}}}
+\newcommand{\dZ}{\frac{d}{dt}\,\mathbf{Z}}
+\newcommand{\dz}{\frac{d}{dt}\,\mathbf{z}}
+
+
+%---------------------------------------
+% Question-&-Solution:
+%---------------------------------------
+\newcommand{\DOT}{{\hspace{12pt}\Large\textbullet~}}
+
+\newcounter{Qnr} \setcounter{Qnr}{1} % Set the counter of the question numbers:
+\newcommand{\QUES}{\noindent \textbf{\large Question~\arabic{Qnr}:} \stepcounter{Qnr} \setcounter{equation}{0} \par \vspace{-10pt}}
+\newcommand{\ques}[1]{\setcounter{equation}{0}{\raggedright \textbf{\large Question~#1:}}}%\vspace{-10pt}}
+\newcommand{\SOL}{{\raggedright{\textbf{\textit{Solution:~}}}}\par}  
+
+%---------------------------------------
+% Proof-&-Answers:
+%---------------------------------------
+% Not required in presence of asma math package:
+\newcommand{\PROOF}{{\raggedright{\textbf{\textit{Proof:~~}}}}} 
+%Do NOT put \\ aftre entering \QUD and \FQED if want use "enter" to make a blank line!
+%\newcommand{\QED}{{\raggedleft \hfill $\blacksquare $\\}}
+%\newcommand{\QED}{\hspace*{\fill}~$\blacksquare$ \par} 
+\newcommand{\QED}{\hspace*{\fill}~\ding{110} \par} %equivalent to the one right above
+\newcommand{\FQED}{\hspace*{\fill}~\ding{118} \par} %equivalent to the one right above
+%\newcommand{\QED}{\hspace*{\fill}~\IEEEQED\par} %<== Just try Once, I do not think that it can work without including IEEEtran.cls though!!!
+
+
+%---------------------------------------
+% Colors:
+%---------------------------------------
+\newcommand{\SBN}[1]{\colorbox[rgb]{0.5,0.5,0.5}{\textcolor[rgb]{1,1,1}{#1}}} %red
+\newcommand{\SBNgrayI}[1]{\color[rgb]{0.75,0.75,0.75}{#1}}
+\newcommand{\SBNgrayII}[1]{\color[rgb]{0.5,0.5,0.5}{#1}}
+\newcommand{\SBNgrayIII}[1]{\color[rgb]{0.25,0.25,0.25}{#1}}
+\newcommand{\SBNblueI}[1]{\color[rgb]{0,0,1}{#1}}
+
+
+%---------------------------------------
+% Colored Box:
+%---------------------------------------
+\newcommand{\BlueBox}[1]{\par\noindent \mbox{\colorbox[rgb]{0.6,0.8,1}{\begin{minipage}[!th]{\textwidth}{#1}\end{minipage}}}}
+\newcommand{\GrayBox}[1]{\noindent \mbox{\colorbox[rgb]{0.5,0.5,0.5}{\textcolor[rgb]{1,1,1}{\small #1}}}\\}
+
+
+%---------------------------------------
+% Some Extera
+%---------------------------------------
+\newcommand{\PutDate}{{\normalfont\bsifamily {Date:~~}\underline{~~\today~~}}}
+
+\newcommand{\itm }[1]{\noindent \textcolor[rgb]{0.3,0.3,0.3}{\textbullet}~~~#1\hfill \\} 
+\newcommand{\jtm}{\noindent{\color[rgb]{0.5,0.5,0.5}\underline{{\hspace{ 0.5cm}}}}~~~~~{\color[rgb]{0.5,0.5,0.5}\underline{{\hspace{16cm}}}}\par \vspace{8pt}}
+
+
+%---------------------------------------
+% Horizental Lines:
+%---------------------------------------
+\newcommand{\HL}{\vspace{3pt} \noindent\hrulefill \\ }
+\newcommand{\HRule}{\rule{\linewidth}{0.7mm}}
+\newcommand{\HRuleGray}{\textcolor[rgb]{0.4,0.4,0.4}{\rule{\linewidth}{0.75pt}}}
+\newcommand{\HRGray}{\noindent\textcolor[rgb]{0.7,0.7,0.7}{\centerline{\rule{\linewidth}{0.75pt}}}}
+
+
+
+%---------------------------------------------------------------------
+% To indicate that LaTeX can stop reading this file. LaTeX will ignore anything after this line.
+\endinput
+%=====================================================================

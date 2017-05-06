@@ -1,0 +1,37 @@
+\documentclass{article}
+\usepackage{siunitx}
+\begin{document}
+%-------------------------------------------------------------------------------
+\section{Some Fancy Stuff} \label{app:fancy}
+%-------------------------------------------------------------------------------
+The \verb@siunitx.sty@ package greatly simplifies TeXing when writing scientific documents, where units and numbers are a big part of the writing. This package adds commands like:\\
+\SI{10}{\henry} \\
+\num{+-2,345},  \num{1ie10},  \num{+-i2,345e13} \\
+\SI{10}{\Omega}, \SI{30}{\ohm}, 40~\si{\ohm}\\
+\si{\kilogram\metre\per\second} \\
+\si{\radian/\second}\\
+
+\par \noindent Or, as shown in the following below.
+\begin{singlespace}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+Name              & Notation            & \verb@\si@  \\ 
+                  &                     & command\\ \hline
+ampere            & \si{\ampere}        & \verb@\si{\ampere}@ \\ \hline 
+centimeter        & \si{\centi\metre}   & \verb@\si{\centi\metre}@\\ \hline
+Angstrom          & \si{\angstrom}      & \verb@\si{\angstrom}@\\ \hline  
+degree Centigrade & \si{\degreeCelsius} & \verb@\si{\degreeCelsius}@\\ \hline
+kelvin            & \si{\kelvin}        & \verb@\si{\kelvin}@\\\hline 
+Henry             & \si{\henry}         & \verb@\si{\henry}@\\\hline  
+Second            & \si{\second}        & \verb@\si{\second}@\\ \hline     
+Volt:             & \si{\volt}          & \verb@\si{\volt}@\\ \hline        						
+electron volt     & \si{\electronvolt}  & \verb@\si{\electronvolt}@\\ \hline
+Farad             & \si{\farad}         & \verb@\si{\farad}@\\ \hline
+meter             & \si{\meter}         & \verb@\si{\meter}@ \\ \hline
+Ohm               & \si{\ohm}           & \verb@\si{\ohm}@ \\ \hline
+\end{tabular}
+\end{center}
+\end{singlespace}
+%-------------------------------------------------------------------------------
+\end{document}

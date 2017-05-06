@@ -1,0 +1,506 @@
+%-------------------------------------------------------------------------------
+% By: Behzad NOURI            Last Modified: 2015-05-08
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+% Page Size:
+%-------------------------------------------------------------------------------
+\usepackage[letterpaper, left=1in,top=2cm,right=2cm,bottom=2cm]{geometry} 
+\pdfpagewidth 8.5in
+\pdfpageheight 11.0in
+
+\brokenpenalty=10000
+
+%-------------------------------------------------------------------------------
+% Margination:
+%-------------------------------------------------------------------------------
+%\setlength{\oddsidemargin}{.5in}
+%\setlength{\textwidth}{6.0in}
+%\setlength{\marginparsep}{.2in}
+%\setlength{\marginparwidth}{1in}
+%
+%\setlength{\topmargin}{-0.3in}
+%\setlength{\headheight}{0.25in}
+%\setlength{\headsep}{0.25in}
+%\setlength{\textheight}{8.6in}
+%\setlength{\footskip}{.5in}
+%
+%\setlength{\parindent}{0pt}
+%\setlength{\parskip}{10pt}
+
+\usepackage{comment,makeidx}
+%-------------------------------------------------------------------------------
+% TypeSetting Adjustments:
+%-------------------------------------------------------------------------------
+\usepackage{setspace}
+%\singlespacing
+%\onehalfspacing  
+%\doublespacing 
+\setstretch{1.25} % for custom spacing
+%\setSingleSpace{1.1} %??
+
+%-------------------------------------------------------------------------------
+% Graphic-Packages:
+%-------------------------------------------------------------------------------
+\usepackage{ifpdf} 
+\ifpdf   %Latex=>pdf/DVI
+\usepackage[pdftex]{graphicx}  	 
+\usepackage{epstopdf}
+\DeclareGraphicsExtensions{.pdf,.jpeg,.jpg,.png,.gif, .eps, .ps}
+\else  %Latex=>ps:
+\usepackage[dvips]{graphicx}
+\DeclareGraphicsExtensions{.eps, .ps}
+\fi
+\graphicspath{{Figs/}{Photos/}{F/}} 
+%\usepackage{transparent}
+%\usepackage{wrapfig,lipsum}   %put text beside the figure
+\usepackage{color}
+
+%-------------------------------------------------------------------------------
+% Subfigure-Packages:
+%-------------------------------------------------------------------------------
+\usepackage{float,rotating} %for image placement
+\usepackage[tight,footnotesize]{subfigure}
+%% Or as another alternative:
+%\usepackage[caption=false]{caption}
+%\usepackage[font=footnotesize]{subfig}
+%\usepackage[caption=false,font=footnotesize]{subfig}
+
+
+%-------------------------------------------------------------------------------
+% Table-Packages:
+%-------------------------------------------------------------------------------
+\usepackage{booktabs,longtable,array,mdwtab,multirow}
+
+%-------------------------------------------------------------------------------
+% Math-Packages:
+%-------------------------------------------------------------------------------
+\usepackage[cmex10]{amsmath}
+\interdisplaylinepenalty=2500
+\usepackage{amssymb, amscd, latexsym, amsthm, cases, mdwmath}
+\usepackage{amsfonts, mathrsfs}    %math fonts
+\usepackage{relsize} %\mathlarger
+
+%% Format of Eq#
+%\renewcommand{\theequation}{\arabic{equation}} % show eq# as (eq)
+%\renewcommand{\theequation}{\arabic{section}.\arabic{equation}}  %show eq# as (sec.eq)
+
+%% Eq# for the book
+%\def\theequation{%
+%  \@ifundefined{@book}{\thechapter.\arabic{equation}}{\@arabic\c@equation} }%
+
+
+%------------------------------------------------------------------------------- 
+% THEOREM ENVIRONMENT:
+%------------------------------------------------------------------------------- 
+%-------------------------------------------------------------------------------
+%  Help on Theorem environment:
+%  "amsthm" provides:  Theorem environments, begin{proof} and a \qedhere which 
+%  produces `tombstones' for the ends of proofs.
+%  The following code will further define theorem, lemma, proposition, corollary,
+%  proof, definition, example and remark environments, together with a control 
+%  sequence \qed which produces `tombstones' for the ends of proofs!
+%
+%  Plains: Theorem, Lemma, Corollary, Proposition, Conjecture,Criterion, Algorithm
+%  Definitions: definition, Condition, Problem, Example,
+%  Remarks:  Remark, Note, Notation, Claim, Summary, Acknowledgment, Case, Conclusion
+%-------------------------------------------------------------------------------
+\theoremstyle{plain} %makes theorem's body italic
+%\newtheorem{theorem}{Theorem}%[section]
+\newtheorem{theorem}{Theorem}%[chapter]
+\newtheorem{lemma}{Lemma}%[theorem]
+\newtheorem{corollary}{Corollary}%[theorem]
+\newtheorem{proposition} {Proposition}%[chapter]
+\newtheorem{conjecture}{Conjecture}%[chapter]
+\theoremstyle{definition}  %makes theorem's body roman
+%\newtheorem{def}{Definition} %[section] %[chapter] %[thm] %[def]
+\newtheorem{definition}{Definition}%[chapter]
+\newtheorem{condition}{Condition}%[chapter]
+\newtheorem{problem}{Problem}%[chapter]
+\newtheorem{example}{Example}%[chapter] 
+\theoremstyle{remark} %makes theorem's body non-italic
+%\newtheorem{rem}{Remark}[section] %[chapter] %[thm] %[def] %[rem]
+\newtheorem{remark}{Remark}%[chapter]
+\newtheorem{question}{Question}%[chapter]
+\newtheorem{claim}{Claim}%[chapter]
+\newtheorem{fact}{Fact}%[chapter]
+\newtheorem{case}{Case}%[chapter]
+\newtheorem{note}{Note}%[chapter]            
+%\newtheorem*{note}{Note}            %*=no numbering
+\newtheorem*{mynotation}{Notation}  %*=no numbering
+\newtheorem*{summary}{Summary}      %*=no numbering
+\newtheorem*{conclusion}{Conclusion}%*=no numbering
+\newtheorem*{acknowledgment}{Acknowledgment} %*=no numbering
+
+\renewcommand{\qedsymbol}{$\blacksquare$} %Adding this gives a ``blach solid-square'' instead of the hollow one viz defult.
+
+%------------------------------------------------------------------------------- 
+% Bibiliography:
+%-------------------------------------------------------------------------------
+\usepackage{cite}
+\bibliographystyle{IEEEtran}
+
+
+%-------------------------------------------------------------------------------
+% WaterMark:
+%-------------------------------------------------------------------------------
+%\usepackage{draftwatermark}
+%\SetWatermarkLightness{0.9}
+%\SetWatermarkScale{5}
+
+
+%-------------------------------------------------------------------------------
+% Hyperlink Properties:
+%-------------------------------------------------------------------------------
+\usepackage{url}  
+\usepackage[pdftex,plainpages=true,pagebackref=true]{hyperref}
+%\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,      % false: boxed links; true: colored links
+    linkcolor=blue,       % color of internal links (change box color with linkbordercolor)
+		citecolor=blue,       % color of links to bibliography, eg green
+    filecolor=magenta,    % color of file links   
+    urlcolor=blue,        % color of external links
+}
+%e.g.:
+%\url{http://www.wikibooks.org}
+%\href{http://www.wikibooks.org}{Wikibooks home}
+%\href{mailto:bn@ieee.org}{bn(at)ieee(dot)org}
+%\href{run:/path/to/my/file.ext}{text displayed} :to local file
+
+
+%\usepackage{pdfsync} %This package has conflict with Table environment
+
+%-------------------------------------------------------------------------------
+% Customizing Enumerated/Itemized Lists:
+%-------------------------------------------------------------------------------
+%  Latex allows the creation of enumerated (ordered) lists up to four deep. The 
+%  numbering styles for each depth can be styled to suit your needs using the 
+%  \renewcommand{label}{style} command, where label is the list depth being styled 
+%  and style is how you want that number to be shown.
+%
+%  label may be any of the following:
+%  \labelenumi    : first level
+%  \labelenumii   : second level
+%  \labelenumiii  : third level
+%  \labelenumiv   : fourth level
+%  style may be any combination of characters and numbers. The item number for each 
+%  list may be printed using:   enumi,  enumii, enumiii, enumiv
+%
+%  These numbers may be styled with the following macros:
+%  \alph{number}    : lowercase letters  a
+%  \Alph{number}    : uppercase letters  A
+%  \arabic{number}  : numbers  1
+%  \roman{number}   : lowercase roman numerals    iv
+%  \Roman{number}   : uppercase roman numerals    IV
+%-------------------------------------------------------------------------------
+\usepackage{enumerate,enumitem}
+
+% \arabic{}. => 1. / (\Alph{}) => (A) /  \alph{}) => a)
+\renewcommand{\labelenumi}{\textbf{(\arabic{enumi}){  }}}      %=>(A)
+\renewcommand{\labelenumii}{\textbf{(\alph{enumii}){  }}}      %=>(a)
+\renewcommand{\labelenumiii}{\textbf{(\roman{enumiii}).{  }}}  %=>      (i)
+\renewcommand{\labelenumiv}{\textbf{\arabic{enumiv}.{  }}}    %=>         (1)
+
+\newenvironment{packed_enumerate}{
+\begin{enumerate}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{-3pt}
+  \setlength{\parsep}{0pt}
+}{\end{enumerate}}
+\newenvironment{packed_itemize}{
+\begin{itemize}
+  \setlength{\itemsep}{1pt}
+  \setlength{\parskip}{-3pt}
+  \setlength{\parsep}{0pt}
+}{\end{itemize}}
+
+
+%help:
+%\begin{enumerate}[noitemsep]   \item   \end{enumerate}
+%\begin{description}[noitemsep] \item   \end{description}
+
+
+%------------------------------------------------------------------------------- 
+% FOOTNOTEing:
+%------------------------------------------------------------------------------- 
+% To make a footnote without number mark use this declaration:
+%\let\thefootnote\relax\footnote{There is no number in this footnote}
+
+% Every-Page:
+%\usepackage{perpage}   %the perpage package
+%\MakePerPage{footnote} %the perpage package command
+
+% Every-chapter:
+%\makeatletter
+%\@addtoreset{footnote}{chapter}%{section}
+%\makeatother
+
+%\renewcommand{\thefootnote}{\arabic{footnote}}	%Arabic numerals, e.g., 1, 2, 3...
+%\renewcommand{\thefootnote}{\roman{footnote}}	%Roman numerals (lowercase), e.g., i, ii, iii...
+%\renewcommand{\thefootnote}{\Roman{footnote}}	%Roman numerals (uppercase), e.g., I, II, III...
+%\renewcommand{\thefootnote}{\alph{footnote}}	  %Alphabetic (lowercase), e.g., a, b, c...
+%\renewcommand{\thefootnote}{\Alph{footnote}}	  %Alphabetic (uppercase), e.g., A, B, C...
+%\renewcommand{\thefootnote}{\fnsymbol{footnote}}	%A sequence of nine symbols (try it and see!)
+
+%Do not attempt to use stfloats with fixltx2e as they are incompatible 
+%dblfloatfix combines the features of both fixltx2e and stfloats.
+%\usepackage{dblfloatfix}
+\usepackage{stfloats}
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}					
+\setlength{\parskip}{4pt}   
+\makeatletter
+\def\@IEEEpubidpullup{1.3\baselineskip}
+\makeatother
+
+%------------------------------------------------------------------------------- 
+% Float Package:
+%-------------------------------------------------------------------------------
+%%\usepackage{fixltx2e}   %not need for latex after 2015
+
+%------------------------------------------------------------------------------- 
+% Language-Packages:
+%------------------------------------------------------------------------------- 
+\usepackage[english]{babel}
+{\catcode`"=13 \gdef"#1{\ifx#1"\discretionary{}{}{}\fi\relax}}
+\def\mdqon{\catcode`"=13\relax}
+\def\mdqoff{\catcode`"=12\relax}
+\makeindex
+\hyphenation{ex-em-pli-fies}
+
+%------------------------------------------------------------------------------- 
+% Enhanced Fonts & Symbols Packages:
+%------------------------------------------------------------------------------- 
+\usepackage[normalem]{ulem}
+\usepackage{pifont, marvosym, textcomp, upgreek, upquote}
+%%\usepackage{ae}      %=>'ae' Has a conflict with mcode.sty
+\usepackage{aecompl}  %=>To use bitmap versions of the characters missing in the ae fonts  
+\usepackage[T1]{fontenc}  
+\usepackage{fancyvrb}  %\VerbatimInput
+\usepackage{pbsi}      %for{\normalfont\bsifamily yourtext}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+%
+\usepackage{soul}
+%\definecolor{lightgreen}{rgb}{0.5,1,0.34}
+%\sethlcolor{lightgreen}
+%The default color for highlighting using hl{xxx} is yellow
+
+% *** Font for whole Doc ***
+\renewcommand{\rmdefault}{ptm}  %change from CM Roman to Times
+%\renewcommand{\familydefault}{\sfdefault}
+
+%-------------------------------------------------------------------------------
+% The microtype package improves the spacing between words and letters. It does 
+% a lot more and most people won’t notice the difference. But still, the 
+% resulting document will be easier to read and looks better when microtype is 
+% loaded. Load this package after fonts, if any, as the 
+%-------------------------------------------------------------------------------
+\usepackage{microtype}
+
+%------------------------------------------------------------------------------- 
+% Matlab Style:
+%-------------------------------------------------------------------------------
+%\usepackage[numbered,framed,autolinebreaks,useliterate]{!sty/mcode}  
+\usepackage[autolinebreaks,useliterate]{!sty/mcode}  
+
+
+%------------------------------------------------------------------------------- 
+% Algorithm Pakages:
+%-------------------------------------------------------------------------------
+\usepackage[ruled,vlined]{algorithm2e}
+\usepackage{algorithmicx}
+
+
+%-------------------------------------------------------------------------------
+% FlowChart:
+%-------------------------------------------------------------------------------
+%\usepackage{pstricks}
+\usepackage{pst-node, pst-3d}
+\usepackage{pst-blur}
+%\definecolor{Pink}{rgb}{1,0.75,0.8}
+%\definecolor{Gray}{rgb}{0.85,0.85,0.85}
+
+%% Define a Paralellogram shape:
+\makeatletter
+\newsavebox\TBox
+\newcommand\psParaBox[2][]{{
+  \psset{framesep=3pt,gangle=60,#1}%
+  \sbox\TBox{\psTilt{\psk@gangle}{\psframebox{\phantom{ #2}}}}%
+  \usebox\TBox%  
+  \rput(-0.5\wd\TBox,\dimexpr 0.5\ht\TBox-1ex\relax){ #2}}}
+\makeatother
+
+
+%------------------------------------------------------------------------------- 
+% Tikz Pakage:
+%-------------------------------------------------------------------------------
+%\usepackage{tikz}   %has confilict with pst-node / pst-blur
+%
+
+%-------------------------------------------------------------------------------
+% The siunitx package greatly simplifies TeXing when writing scientific documents, 
+% where units and numbers are a big part of the writing. This package adds 
+% commands like:
+% \num for typesetting numbers in all sorts of ways 
+% \si  for units. 
+% e.g:
+% \SI{10}{\hertz} ---> 10Hz 
+% \SIrange{10}{100}{\hertz} ---> 10Hz to 100Hz
+%-------------------------------------------------------------------------------
+\usepackage{siunitx}
+\RequirePackage[l2tabu, orthodox]{nag}
+
+
+%------------------------------------------------------------------------------- 
+% Subsection Definitions:
+%------------------------------------------------------------------------------- 
+\newcommand{\subsubsubsection}[1]{\paragraph{#1} {\hfill \newline \noindent}} 
+
+
+%-------------------------------------------------------------------------------
+% Print Pages:
+%-------------------------------------------------------------------------------
+\def\blankpage{%
+\thispagestyle{empty}
+\vspace*{\stretch{1}}
+\centerline{This page intentionally left blank. } 
+\vspace*{\stretch{4}}
+\clearpage }%
+
+%-------------------------------------------------------------------------------
+% 'dedication' environment: To add a dedication paragraph at the start of book  
+% Source: http://www.tug.org/pipermail/texhax/2010-June/015184.html             
+%-------------------------------------------------------------------------------
+\newenvironment{dedication}
+{  \blankpage
+   \cleardoublepage
+   \thispagestyle{empty}
+   \vspace*{\stretch{1}}
+   \hfill \begin{minipage}[t]{0.4\textwidth}
+   \raggedright
+}
+{
+   \end{minipage}
+   \vspace*{\stretch{4}}
+   \clearpage
+} 
+
+%-------------------------------------------------------------------------------
+% Chapter quote at the start of chapter   
+% Source: http://tex.stackexchange.com/a/53380              
+%-------------------------------------------------------------------------------
+\makeatletter
+%\renewcommand{\@chapapp}{}% Not necessary...
+\newenvironment{chapquote}[2][2em]
+  {\setlength{\@tempdima}{#1}%
+   \def\chapquote@author{#2}%
+   \parshape 1 \@tempdima \dimexpr\textwidth-2\@tempdima\relax%
+   \itshape}
+  {\par\normalfont\hfill--\ \chapquote@author\hspace*{\@tempdima}\par\bigskip}
+\makeatother
+
+%-------------------------------------------------------------------------------
+% Table of Contents:
+%-------------------------------------------------------------------------------
+\newcommand{\toc}{%
+%\section*{}
+\begin{center}
+%{\Large \textsc{\textbf{Hspice~~Primer}} }\\ \vspace{14pt}  
+\mbox{\colorbox[rgb]{0.95,0.95,0.95}{%{0.85,0.85,0.85}{
+\begin{minipage}{0.85\textwidth}
+\noindent \HRuleGray
+\vspace{-12pt}
+{\footnotesize \tableofcontents}
+\noindent \HRuleGray
+\end{minipage} }} %\mbox
+\end{center}}
+
+
+%-------------------------------------------------------------------------------
+% Title of the document: 
+%    \htitleCU{title of the DOC in the middle}{Updated: xxx. xx, xxxx}
+%-------------------------------------------------------------------------------
+\newif\ifisCUtitle
+%\isCUtitlefalse ---or--- \isCUtitletrue
+%\newcommand{\BotL}{}
+\newcommand{\htitle}[2]{%
+\thispagestyle{empty}
+\begin{singlespace}
+\centering
+\noindent\vspace*{-0.75\toppush}\newline\parbox{6.5in}\par
+\ifisCUtitle
+\mbox{\noindent \rule{0.46\linewidth}{1pt}\hspace{0.08\linewidth}\rule{0.46\linewidth}{1pt}}\\[-16pt]
+\includegraphics[trim=0in 0in 0in 0in, , clip=true, keepaspectratio=true, scale=0.05]{Logo/cu1.png}\\[-16pt]
+\TopL \hfill \TopR\\[6pt]
+\else
+\noindent \rule{\linewidth}{1pt}
+\fi
+\textbf{\midl}\\[4pt]
+{\BotR \hfill #2}\\[-8pt]
+%{\BotL \hfill \BotR}\\[-4pt]
+\mbox{}\noindent \rule{\linewidth}{1pt}\\[-12pt]
+\begin{center}\textbf{\large #1}\end{center}
+\end{singlespace}
+%\vspace*{-0.1\toppush}
+}%\htitle
+%----
+%%\else
+%%%----
+%%%\newcommand{\BotL}{}
+%%\newcommand{\htitle}[2]{%
+%%\thispagestyle{empty}
+%%\begin{singlespace}
+%%\centering
+%%\noindent \rule{\linewidth}{1pt}
+%%\textbf{\large \LineA}\\[4pt]
+%%\LineB\\[4pt]
+%%\LineC\\[4pt]
+%%{#2}\\[-8pt]
+%%\mbox{}\noindent \rule{\linewidth}{1pt}\\[-12pt]
+%%\begin{center}\textbf{\large #1}\end{center}
+%%\end{singlespace}
+%%\vspace*{-0.4\toppush}}
+%%\fi
+
+%------------------------------------
+\newlength{\toppush}
+\setlength{\toppush}{2\headheight}
+\addtolength{\toppush}{\headsep}
+
+%-------------------------------------------------------------------------------
+% Header-Footer:
+%-------------------------------------------------------------------------------
+\usepackage{fancyhdr, lastpage}
+\pagestyle{fancy}
+\setlength{\topskip   }{10pt} %header to the top of paper
+\setlength{\headheight}{30pt} %height of the header
+\setlength{\headsep   }{5pt}  %header to the first line
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{1pt}
+\fancyhead[L]{\HdrL}  \fancyhead[C]{\HdrC}  \fancyhead[R]{\HdrR}
+\fancyfoot[L]{\FtrL}  \fancyfoot[C]{\FtrC}  \fancyfoot[R]{\FtrR}
+
+
+%Hdr1: my Tech-Rep
+\newcommand{\HdrR}{{\normalfont {\thepage~/~\pageref{LastPage}}}}
+%\newcommand{\HdrR}{{\normalfont\bsifamily {Date:~~}\underline{~~\today~~}}}
+
+%Ftr2:
+%\newcommand{\FtrL}{\small \today}
+\newcommand{\FtrL}{}
+\newcommand{\FtrC}{}
+\newcommand{\FtrR}{} 
+%\newcommand{\FtrR}{{\tiny \LaTeXe~(\version)-\today}} 
+
+
+%-------------------------------------------------------------------------------
+% End-of-File:
+%-------------------------------------------------------------------------------
+% To indicate that LaTeX can stop reading this file. LaTeX will ignore anything after this line.
+\endinput
+%===============================================================================
+
+
+
